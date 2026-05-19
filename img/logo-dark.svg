@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 44" fill="none">
+  <!-- Icon: P on dark pill -->
+  <rect width="44" height="44" rx="11" fill="url(#lg)"/>
+  <defs>
+    <linearGradient id="lg" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0c1730"/>
+      <stop offset="1" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="lga" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <!-- Accent top-right corner dot -->
+  <circle cx="36" cy="8" r="3" fill="url(#lga)" opacity="0.9"/>
+  <!-- Letter P -->
+  <text x="13" y="32" font-family="Inter,system-ui,sans-serif" font-weight="800" font-size="26" fill="#ffffff" letter-spacing="-1">P</text>
+
+  <!-- Wordmark -->
+  <text x="56" y="22" font-family="Inter,system-ui,sans-serif" font-weight="800" font-size="18" fill="#ffffff" letter-spacing="-0.5">Projexa<tspan fill="url(#lga)">AI</tspan></text>
+  <text x="57" y="36" font-family="Inter,system-ui,sans-serif" font-weight="500" font-size="10" fill="#8896b2" letter-spacing="1.2">CONSTRUCTION INTELLIGENCE</text>
+</svg>

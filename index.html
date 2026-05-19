@@ -3,424 +3,744 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ProjexaAI — Control de obra inteligente con IA</title>
-  <meta name="description" data-i18n-attr="content" data-i18n="meta.description" content="Plataforma todo-en-uno para construcción: planificación, presupuestos, costos reales, EVM, Gantt con ruta crítica y cuantificación de materiales con IA." />
+  <title>ProjexaAI — Gestión profesional de obra con IA</title>
+  <meta name="description" content="De los planos a la entrega — control total sobre presupuesto, costos, cronograma, EVM y ruta crítica. Potenciado por inteligencia artificial." />
   <meta name="theme-color" content="#050b1c" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="ProjexaAI — Control de obra con IA" />
-  <meta property="og:description" content="Planifica, presupuesta y controla tu obra en tiempo real. EVM, Gantt + ruta crítica, cuantificador IA, multi-proyecto y offline." />
+  <meta property="og:title" content="ProjexaAI — Gestión profesional de obra con IA" />
+  <meta property="og:description" content="De los planos a la entrega — control total sobre presupuesto, costos, cronograma, EVM y ruta crítica." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://projexaai.com" />
-  <meta property="og:image" content="https://projexaai.com/img/og-image.png" />
 
   <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
 
-  <!-- ── Top bar ────────────────────────────────────────────────────── -->
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a href="#top" class="brand">
-        <div class="brand-logo">P</div>
-        <div class="brand-text">
-          <span class="brand-name">ProjexaAI</span>
-          <span class="brand-sub" data-i18n="brand.tagline">Control de obra con IA</span>
-        </div>
-      </a>
+<!-- ── TOPBAR ───────────────────────────────────────────────────── -->
+<header class="topbar" id="topbar">
+  <div class="container topbar-inner">
+    <a href="#top" class="brand-link">
+      <img src="/img/logo-light.svg" alt="ProjexaAI" class="logo logo-light" height="38" />
+      <img src="/img/logo-dark.svg" alt="ProjexaAI" class="logo logo-dark" height="38" />
+    </a>
+    <nav class="topnav" id="topnav">
+      <a href="#features" data-i18n="nav.features">Funciones</a>
+      <a href="#tour" data-i18n="nav.tour">Demo</a>
+      <a href="#pricing" data-i18n="nav.pricing">Planes</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="lang-switch">
+        <button data-lang="es" class="lang-btn active">ES</button>
+        <button data-lang="en" class="lang-btn">EN</button>
+        <button data-lang="pt" class="lang-btn">PT</button>
+      </div>
+      <a href="https://laguna-property.onrender.com" class="btn btn-ghost" data-i18n="nav.login">Iniciar sesión</a>
+      <a href="https://laguna-property.onrender.com" class="btn btn-cta" data-i18n="nav.signup">Empezar gratis</a>
+      <button class="mobile-toggle" id="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
 
-      <nav class="topnav" id="topnav">
+<main id="top">
+
+<!-- ── HERO (dark) ─────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="blueprint-grid"></div>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-text" data-reveal>
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span data-i18n="hero.eyebrow">Construcción · IA · Tiempo real</span>
+      </div>
+      <h1 class="hero-title" data-i18n="hero.title">
+        De los planos a la entrega —<br/><span class="hero-grad">con control total en cada etapa.</span>
+      </h1>
+      <p class="hero-lead" data-i18n="hero.lead">
+        ProjexaAI centraliza presupuesto, costos reales, cronograma, EVM y cuantificación de materiales con IA en una sola plataforma diseñada para equipos de construcción profesionales.
+      </p>
+      <div class="hero-cta">
+        <a href="https://laguna-property.onrender.com" class="btn btn-cta btn-xl" data-i18n="hero.cta_primary">
+          <i class="fa-solid fa-rocket"></i> Crear cuenta gratis
+        </a>
+        <a href="#tour" class="btn btn-outline-light btn-xl" data-i18n="hero.cta_tour">
+          <i class="fa-solid fa-circle-play"></i> Ver demo
+        </a>
+      </div>
+      <div class="hero-pills">
+        <span><i class="fa-solid fa-check"></i> <span data-i18n="hero.pill1">Sin tarjeta de crédito</span></span>
+        <span><i class="fa-solid fa-check"></i> <span data-i18n="hero.pill2">Multi-proyecto</span></span>
+        <span><i class="fa-solid fa-check"></i> <span data-i18n="hero.pill3">Offline (PWA)</span></span>
+      </div>
+    </div>
+
+    <!-- Hero dashboard mockup -->
+    <div class="hero-visual" data-reveal-delay>
+      <div class="app-frame">
+        <div class="app-sidebar">
+          <div class="app-brand"><div class="app-logo-dot">P</div></div>
+          <div class="app-nav-items">
+            <div class="app-nav-item active"><i class="fa-solid fa-gauge-high"></i></div>
+            <div class="app-nav-item"><i class="fa-solid fa-diagram-project"></i></div>
+            <div class="app-nav-item"><i class="fa-solid fa-wallet"></i></div>
+            <div class="app-nav-item"><i class="fa-solid fa-receipt"></i></div>
+            <div class="app-nav-item"><i class="fa-solid fa-hard-hat"></i></div>
+            <div class="app-nav-item"><i class="fa-solid fa-camera"></i></div>
+            <div class="app-nav-item"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          </div>
+        </div>
+        <div class="app-main">
+          <div class="app-topbar">
+            <div class="app-breadcrumb">Dashboard · <span>Torre Central</span></div>
+            <div class="app-topbar-right">
+              <div class="app-badge green">▲ En tiempo</div>
+              <div class="app-avatar">PC</div>
+            </div>
+          </div>
+          <div class="app-content">
+            <!-- EVM Strip -->
+            <div class="evm-strip">
+              <div class="evm-kpi blue"><div class="evm-k">CPI</div><div class="evm-v">1.08</div></div>
+              <div class="evm-kpi teal"><div class="evm-k">SPI</div><div class="evm-v">0.94</div></div>
+              <div class="evm-kpi green"><div class="evm-k">Avance</div><div class="evm-v">62%</div></div>
+              <div class="evm-kpi amber"><div class="evm-k">EAC</div><div class="evm-v">$218k</div></div>
+              <div class="evm-kpi purple"><div class="evm-k">Fin est.</div><div class="evm-v">+12d</div></div>
+            </div>
+            <!-- Budget chart (simplified bars) -->
+            <div class="dash-chart-row">
+              <div class="dash-chart">
+                <div class="dc-label">Presupuesto vs Real</div>
+                <div class="dc-bars">
+                  <div class="dc-group"><div class="dc-bar b-budget" style="height:72%"></div><div class="dc-bar b-real" style="height:55%"></div><div class="dc-tag">Mar</div></div>
+                  <div class="dc-group"><div class="dc-bar b-budget" style="height:80%"></div><div class="dc-bar b-real" style="height:70%"></div><div class="dc-tag">Abr</div></div>
+                  <div class="dc-group"><div class="dc-bar b-budget" style="height:65%"></div><div class="dc-bar b-real" style="height:68%"></div><div class="dc-tag">May</div></div>
+                  <div class="dc-group"><div class="dc-bar b-budget" style="height:90%"></div><div class="dc-bar b-real" style="height:82%"></div><div class="dc-tag">Jun</div></div>
+                  <div class="dc-group"><div class="dc-bar b-budget" style="height:75%"></div><div class="dc-bar b-real" style="height:78%"></div><div class="dc-tag">Jul</div></div>
+                </div>
+              </div>
+              <div class="dash-phases">
+                <div class="dp-label">Fases</div>
+                <div class="dp-row"><span>Estructura</span><div class="dp-progress"><div style="width:85%;background:#1e40af"></div></div><span>85%</span></div>
+                <div class="dp-row"><span>Mampostería</span><div class="dp-progress"><div style="width:60%;background:#0891b2"></div></div><span>60%</span></div>
+                <div class="dp-row"><span>Instalaciones</span><div class="dp-progress"><div style="width:40%;background:#7c3aed"></div></div><span>40%</span></div>
+                <div class="dp-row"><span>Acabados</span><div class="dp-progress"><div style="width:10%;background:#d97706"></div></div><span>10%</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Floating badges -->
+      <div class="float-badge float-ai">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <div><strong data-i18n="hero.badge_ai">IA activa</strong><small data-i18n="hero.badge_ai_sub">Cuantificando materiales</small></div>
+      </div>
+      <div class="float-badge float-alert">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <div><strong data-i18n="hero.badge_alert">Alerta CPM</strong><small data-i18n="hero.badge_alert_sub">Ruta crítica en riesgo</small></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stat strip inside hero -->
+  <div class="hero-stats">
+    <div class="container">
+      <div class="hero-stats-inner">
+        <div class="hstat"><div class="hstat-val">EVM</div><div class="hstat-lbl" data-i18n="stat.evm">Valor Ganado completo</div></div>
+        <div class="hstat-divider"></div>
+        <div class="hstat"><div class="hstat-val">CPM</div><div class="hstat-lbl" data-i18n="stat.cpm">Ruta crítica automática</div></div>
+        <div class="hstat-divider"></div>
+        <div class="hstat"><div class="hstat-val">IA</div><div class="hstat-lbl" data-i18n="stat.ai">Cuantificador de materiales</div></div>
+        <div class="hstat-divider"></div>
+        <div class="hstat"><div class="hstat-val">PWA</div><div class="hstat-lbl" data-i18n="stat.pwa">Funciona sin conexión</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ────────────────────────────────────────────────── -->
+<section id="features" class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="kicker" data-i18n="features.kicker">Funciones</span>
+      <h2 data-i18n="features.title">Todo lo que necesitas para controlar tu obra.</h2>
+      <p class="section-lead" data-i18n="features.subtitle">Haz clic en cualquier función para ver cómo se ve en la plataforma.</p>
+    </div>
+    <div class="features-grid" data-reveal>
+
+      <article class="feature-card" data-feature="dashboard" tabindex="0">
+        <div class="fc-icon feat-blue"><i class="fa-solid fa-gauge-high"></i></div>
+        <h3 data-i18n="features.f1_title">Dashboard con EVM</h3>
+        <p data-i18n="features.f1_text">CPI, SPI, EV, PV, EAC, VAC y fecha estimada de término en tiempo real.</p>
+        <div class="fc-cta" data-i18n="features.see_action">Ver en acción <i class="fa-solid fa-arrow-right"></i></div>
+      </article>
+
+      <article class="feature-card" data-feature="gantt" tabindex="0">
+        <div class="fc-icon feat-teal"><i class="fa-solid fa-diagram-project"></i></div>
+        <h3 data-i18n="features.f2_title">Gantt + Ruta crítica</h3>
+        <p data-i18n="features.f2_text">CPM con forward/backward pass. Exporta a PDF con un click.</p>
+        <div class="fc-cta" data-i18n="features.see_action">Ver en acción <i class="fa-solid fa-arrow-right"></i></div>
+      </article>
+
+      <article class="feature-card" data-feature="ia" tabindex="0">
+        <div class="fc-icon feat-purple"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h3 data-i18n="features.f3_title">Cuantificador con IA</h3>
+        <p data-i18n="features.f3_text">Sube planos y la IA propone materiales y mano de obra con cantidades.</p>
+        <div class="fc-cta" data-i18n="features.see_action">Ver en acción <i class="fa-solid fa-arrow-right"></i></div>
+      </article>
+
+      <article class="feature-card" data-feature="costs" tabindex="0">
+        <div class="fc-icon feat-amber"><i class="fa-solid fa-receipt"></i></div>
+        <h3 data-i18n="features.f4_title">Presupuesto vs. Costos reales</h3>
+        <p data-i18n="features.f4_text">Captura facturas y compara contra lo presupuestado por partida.</p>
+        <div class="fc-cta" data-i18n="features.see_action">Ver en acción <i class="fa-solid fa-arrow-right"></i></div>
+      </article>
+
+      <article class="feature-card" data-feature="bitacora" tabindex="0">
+        <div class="fc-icon feat-green"><i class="fa-solid fa-camera"></i></div>
+        <h3 data-i18n="features.f5_title">Bitácora con fotos</h3>
+        <p data-i18n="features.f5_text">Registro diario con evidencia fotográfica, clima y avance del día.</p>
+        <div class="fc-cta" data-i18n="features.see_action">Ver en acción <i class="fa-solid fa-arrow-right"></i></div>
+      </article>
+
+      <article class="feature-card" data-feature="multiproject" tabindex="0">
+        <div class="fc-icon feat-red"><i class="fa-solid fa-building"></i></div>
+        <h3 data-i18n="features.f6_title">Multi-proyecto · Multi-empresa</h3>
+        <p data-i18n="features.f6_text">Portafolio de obras con roles y permisos por equipo.</p>
+        <div class="fc-cta" data-i18n="features.see_action">Ver en acción <i class="fa-solid fa-arrow-right"></i></div>
+      </article>
+
+      <article class="feature-card" data-feature="offline" tabindex="0">
+        <div class="fc-icon feat-blue"><i class="fa-solid fa-wifi"></i></div>
+        <h3 data-i18n="features.f7_title">Funciona offline (PWA)</h3>
+        <p data-i18n="features.f7_text">Instálala en tu teléfono. Trabaja sin señal, sincroniza después.</p>
+        <div class="fc-cta" data-i18n="features.see_action">Ver en acción <i class="fa-solid fa-arrow-right"></i></div>
+      </article>
+
+      <article class="feature-card" data-feature="audit" tabindex="0">
+        <div class="fc-icon feat-teal"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3 data-i18n="features.f8_title">Auditoría y trazabilidad</h3>
+        <p data-i18n="features.f8_text">Cada cambio registrado con usuario, fecha y diff completo.</p>
+        <div class="fc-cta" data-i18n="features.see_action">Ver en acción <i class="fa-solid fa-arrow-right"></i></div>
+      </article>
+
+      <article class="feature-card" data-feature="concrete" tabindex="0">
+        <div class="fc-icon feat-purple"><i class="fa-solid fa-flask"></i></div>
+        <h3 data-i18n="features.f9_title">Calculadora de concreto</h3>
+        <p data-i18n="features.f9_text">Dosificaciones por f'c sin necesidad de montar un proyecto completo.</p>
+        <div class="fc-cta" data-i18n="features.see_action">Ver en acción <i class="fa-solid fa-arrow-right"></i></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── TOUR ────────────────────────────────────────────────────── -->
+<section id="tour" class="section tour-section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="kicker" data-i18n="tour.kicker">Demo</span>
+      <h2 data-i18n="tour.title">Recorre la plataforma en 60 segundos.</h2>
+      <p class="section-lead" data-i18n="tour.lead">Cada pantalla que ves es la interfaz real de ProjexaAI.</p>
+    </div>
+    <div class="tour-wrap" data-reveal>
+      <div class="tour-nav">
+        <button class="tour-tab active" data-slide="0" data-i18n="tour.tab0">Dashboard</button>
+        <button class="tour-tab" data-slide="1" data-i18n="tour.tab1">Cronograma</button>
+        <button class="tour-tab" data-slide="2" data-i18n="tour.tab2">IA Cuantificador</button>
+        <button class="tour-tab" data-slide="3" data-i18n="tour.tab3">Costos</button>
+        <button class="tour-tab" data-slide="4" data-i18n="tour.tab4">Bitácora</button>
+        <button class="tour-tab" data-slide="5" data-i18n="tour.tab5">Proyectos</button>
+      </div>
+      <div class="tour-stage">
+        <div class="tour-slides" id="tourSlides">
+
+          <!-- Slide 0: Dashboard -->
+          <div class="tour-slide active">
+            <div class="ts-browser">
+              <div class="ts-bar"><span class="ts-dot r"></span><span class="ts-dot y"></span><span class="ts-dot g"></span><span class="ts-url">app.projexaai.com/#/dashboard</span></div>
+              <div class="ts-screen">
+                <div class="ts-sidebar">
+                  <div class="ts-logo">P</div>
+                  <div class="ts-navg active"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></div>
+                  <div class="ts-navg"><i class="fa-solid fa-diagram-project"></i><span>Fases</span></div>
+                  <div class="ts-navg"><i class="fa-solid fa-wallet"></i><span>Presupuesto</span></div>
+                  <div class="ts-navg"><i class="fa-solid fa-receipt"></i><span>Costos</span></div>
+                </div>
+                <div class="ts-main">
+                  <div class="ts-toprow">
+                    <h4>Dashboard</h4>
+                    <div class="ts-proj-badge"><i class="fa-solid fa-building-columns"></i> Torre Central — Piso 12</div>
+                  </div>
+                  <div class="ts-evm-row">
+                    <div class="ts-kpi k-blue"><div class="k-lbl">CPI</div><div class="k-val">1.08</div></div>
+                    <div class="ts-kpi k-teal"><div class="k-lbl">SPI</div><div class="k-val">0.94</div></div>
+                    <div class="ts-kpi k-green"><div class="k-lbl">Avance</div><div class="k-val">62%</div></div>
+                    <div class="ts-kpi k-amber"><div class="k-lbl">EAC</div><div class="k-val">$218k</div></div>
+                    <div class="ts-kpi k-red"><div class="k-lbl">Desv.</div><div class="k-val">-$8k</div></div>
+                  </div>
+                  <div class="ts-two-col">
+                    <div class="ts-card">
+                      <div class="ts-card-title">Presupuesto vs Real (mes)</div>
+                      <div class="ts-minibars">
+                        <div><div class="mb b-budget" style="height:70%"></div><div class="mb b-real" style="height:55%"></div></div>
+                        <div><div class="mb b-budget" style="height:80%"></div><div class="mb b-real" style="height:72%"></div></div>
+                        <div><div class="mb b-budget" style="height:60%"></div><div class="mb b-real" style="height:63%"></div></div>
+                        <div><div class="mb b-budget" style="height:90%"></div><div class="mb b-real" style="height:82%"></div></div>
+                        <div><div class="mb b-budget" style="height:75%"></div><div class="mb b-real" style="height:76%"></div></div>
+                      </div>
+                      <div class="ts-legend"><span class="leg-dot" style="background:#1e40af"></span>Presup. <span class="leg-dot" style="background:#0891b2;margin-left:8px"></span>Real</div>
+                    </div>
+                    <div class="ts-card">
+                      <div class="ts-card-title">Avance por fase</div>
+                      <div class="ts-phase-list">
+                        <div class="ts-phase"><span>Estructura</span><div class="ts-pbar"><div style="width:85%;background:#1e40af"></div></div><span>85%</span></div>
+                        <div class="ts-phase"><span>Mampostería</span><div class="ts-pbar"><div style="width:60%;background:#0891b2"></div></div><span>60%</span></div>
+                        <div class="ts-phase"><span>Instalaciones</span><div class="ts-pbar"><div style="width:40%;background:#7c3aed"></div></div><span>40%</span></div>
+                        <div class="ts-phase"><span>Acabados</span><div class="ts-pbar"><div style="width:10%;background:#d97706"></div></div><span>10%</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tour-caption">
+              <h3 data-i18n="tour.c0_title">Dashboard EVM en tiempo real</h3>
+              <p data-i18n="tour.c0_text">CPI, SPI, avance real vs planificado y fecha estimada de término — todo calculado automáticamente. Sin fórmulas manuales.</p>
+            </div>
+          </div>
+
+          <!-- Slide 1: Gantt -->
+          <div class="tour-slide">
+            <div class="ts-browser">
+              <div class="ts-bar"><span class="ts-dot r"></span><span class="ts-dot y"></span><span class="ts-dot g"></span><span class="ts-url">app.projexaai.com/#/phases</span></div>
+              <div class="ts-screen">
+                <div class="ts-sidebar">
+                  <div class="ts-logo">P</div>
+                  <div class="ts-navg"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></div>
+                  <div class="ts-navg active"><i class="fa-solid fa-diagram-project"></i><span>Fases</span></div>
+                  <div class="ts-navg"><i class="fa-solid fa-wallet"></i><span>Presupuesto</span></div>
+                  <div class="ts-navg"><i class="fa-solid fa-receipt"></i><span>Costos</span></div>
+                </div>
+                <div class="ts-main">
+                  <div class="ts-toprow"><h4>Fases / Gantt</h4><div class="ts-actions"><button class="ts-btn">Exportar PDF</button><button class="ts-btn ts-btn-primary">+ Fase</button></div></div>
+                  <div class="ts-gantt-wrap">
+                    <div class="ts-gantt-header">
+                      <div class="tgh-label">Fase</div>
+                      <div class="tgh-months"><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span></div>
+                    </div>
+                    <div class="ts-gantt-rows">
+                      <div class="tgr"><span class="tgr-name">Cimentación</span><div class="tgr-track"><div class="tgr-bar" style="left:0%;width:14%"></div></div><span class="tgr-pct">100%</span></div>
+                      <div class="tgr"><span class="tgr-name">Estructura</span><div class="tgr-track"><div class="tgr-bar critical" style="left:12%;width:35%"></div><div class="critical-tag">Ruta crítica</div></div><span class="tgr-pct">85%</span></div>
+                      <div class="tgr"><span class="tgr-name">Mampostería</span><div class="tgr-track"><div class="tgr-bar" style="left:30%;width:28%"></div></div><span class="tgr-pct">60%</span></div>
+                      <div class="tgr"><span class="tgr-name">Instalaciones</span><div class="tgr-track"><div class="tgr-bar" style="left:40%;width:32%"></div></div><span class="tgr-pct">40%</span></div>
+                      <div class="tgr"><span class="tgr-name">Acabados</span><div class="tgr-track"><div class="tgr-bar" style="left:60%;width:35%"></div></div><span class="tgr-pct">10%</span></div>
+                    </div>
+                    <div class="today-line"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tour-caption">
+              <h3 data-i18n="tour.c1_title">Gantt + CPM automático</h3>
+              <p data-i18n="tour.c1_text">El algoritmo de ruta crítica (CPM) se recalcula con cada cambio. Identifica qué fases bloquean el proyecto y cuántos días están en riesgo.</p>
+            </div>
+          </div>
+
+          <!-- Slide 2: IA -->
+          <div class="tour-slide">
+            <div class="ts-browser">
+              <div class="ts-bar"><span class="ts-dot r"></span><span class="ts-dot y"></span><span class="ts-dot g"></span><span class="ts-url">app.projexaai.com/#/ia-quantifier</span></div>
+              <div class="ts-screen">
+                <div class="ts-sidebar">
+                  <div class="ts-logo">P</div>
+                  <div class="ts-navg"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></div>
+                  <div class="ts-navg"><i class="fa-solid fa-diagram-project"></i><span>Fases</span></div>
+                  <div class="ts-navg"><i class="fa-solid fa-wallet"></i><span>Presupuesto</span></div>
+                  <div class="ts-navg active"><i class="fa-solid fa-wand-magic-sparkles"></i><span>IA</span></div>
+                </div>
+                <div class="ts-main">
+                  <div class="ts-toprow"><h4>Cuantificador IA</h4></div>
+                  <div class="ts-ia-wrap">
+                    <div class="ts-ia-left">
+                      <div class="ts-upload-zone">
+                        <i class="fa-solid fa-file-image"></i>
+                        <div class="ts-upload-name">plano-arquitectonico-A1.pdf</div>
+                        <div class="ts-upload-status ok"><i class="fa-solid fa-check"></i> Analizado</div>
+                      </div>
+                      <div class="ts-ia-prompt">
+                        <div class="ts-ia-msg sys">Plano recibido. Identifiqué 6 ambientes y 3 plantas. ¿Genero lista de materiales completa o por fase?</div>
+                        <div class="ts-ia-msg usr">Lista completa con mano de obra.</div>
+                        <div class="ts-ia-msg sys thinking"><span></span><span></span><span></span></div>
+                      </div>
+                    </div>
+                    <div class="ts-ia-right">
+                      <div class="ts-ia-table-title">Lista generada <span class="ts-badge-new">IA</span></div>
+                      <div class="ts-ia-table">
+                        <div class="ts-ia-row h"><span>Material</span><span>Unid.</span><span>Cant.</span></div>
+                        <div class="ts-ia-row"><span>Cemento Portland</span><span>saco</span><span>420</span></div>
+                        <div class="ts-ia-row"><span>Bloque 6"</span><span>u</span><span>8 400</span></div>
+                        <div class="ts-ia-row"><span>Varilla #4</span><span>qq</span><span>38</span></div>
+                        <div class="ts-ia-row"><span>Arena</span><span>m³</span><span>24</span></div>
+                        <div class="ts-ia-row"><span>Mano de obra</span><span>jornal</span><span>180</span></div>
+                      </div>
+                      <button class="ts-btn ts-btn-primary" style="margin-top:8px;width:100%">Importar al presupuesto</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tour-caption">
+              <h3 data-i18n="tour.c2_title">Cuantificación de materiales con IA</h3>
+              <p data-i18n="tour.c2_text">Sube tus planos PDF y la IA analiza ambientes, dimensiones y estructuras para proponer cantidades de materiales y jornales. Editable antes de importar.</p>
+            </div>
+          </div>
+
+          <!-- Slide 3: Costs -->
+          <div class="tour-slide">
+            <div class="ts-browser">
+              <div class="ts-bar"><span class="ts-dot r"></span><span class="ts-dot y"></span><span class="ts-dot g"></span><span class="ts-url">app.projexaai.com/#/costs</span></div>
+              <div class="ts-screen">
+                <div class="ts-sidebar">
+                  <div class="ts-logo">P</div>
+                  <div class="ts-navg"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></div>
+                  <div class="ts-navg"><i class="fa-solid fa-diagram-project"></i><span>Fases</span></div>
+                  <div class="ts-navg"><i class="fa-solid fa-wallet"></i><span>Presupuesto</span></div>
+                  <div class="ts-navg active"><i class="fa-solid fa-receipt"></i><span>Costos</span></div>
+                </div>
+                <div class="ts-main">
+                  <div class="ts-toprow"><h4>Costos reales</h4><button class="ts-btn ts-btn-primary">+ Costo</button></div>
+                  <div class="ts-cost-summary">
+                    <div class="ts-cs"><div class="ts-cs-lbl">Presupuestado</div><div class="ts-cs-val navy">$210,000</div></div>
+                    <div class="ts-cs"><div class="ts-cs-lbl">Gastado</div><div class="ts-cs-val blue">$134,200</div></div>
+                    <div class="ts-cs"><div class="ts-cs-lbl">Disponible</div><div class="ts-cs-val green">$75,800</div></div>
+                    <div class="ts-cs"><div class="ts-cs-lbl">Desviación</div><div class="ts-cs-val amber">+2.1%</div></div>
+                  </div>
+                  <div class="ts-cost-table">
+                    <div class="tct-row h"><span>Descripción</span><span>Categoría</span><span>Fase</span><span>Monto</span></div>
+                    <div class="tct-row"><span>Concreto 3000PSI — 18m³</span><span class="tct-cat mat">Material</span><span>Estructura</span><span>$4,320</span></div>
+                    <div class="tct-row"><span>Jornales semana 18</span><span class="tct-cat lab">Mano obra</span><span>Mampostería</span><span>$2,800</span></div>
+                    <div class="tct-row"><span>Varillas corrugadas #4</span><span class="tct-cat mat">Material</span><span>Estructura</span><span>$1,960</span></div>
+                    <div class="tct-row"><span>Andamios (alquiler)</span><span class="tct-cat eq">Equipo</span><span>Estructura</span><span>$640</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tour-caption">
+              <h3 data-i18n="tour.c3_title">Control presupuestario en tiempo real</h3>
+              <p data-i18n="tour.c3_text">Registra cada gasto y asígnalo a fase y categoría. El sistema compara automáticamente contra el presupuesto y calcula la desviación acumulada.</p>
+            </div>
+          </div>
+
+          <!-- Slide 4: Bitácora -->
+          <div class="tour-slide">
+            <div class="ts-browser">
+              <div class="ts-bar"><span class="ts-dot r"></span><span class="ts-dot y"></span><span class="ts-dot g"></span><span class="ts-url">app.projexaai.com/#/bitacora</span></div>
+              <div class="ts-screen">
+                <div class="ts-sidebar">
+                  <div class="ts-logo">P</div>
+                  <div class="ts-navg"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></div>
+                  <div class="ts-navg"><i class="fa-solid fa-diagram-project"></i><span>Fases</span></div>
+                  <div class="ts-navg active"><i class="fa-solid fa-camera"></i><span>Bitácora</span></div>
+                </div>
+                <div class="ts-main">
+                  <div class="ts-toprow"><h4>Bitácora de obra</h4><button class="ts-btn ts-btn-primary">+ Entrada</button></div>
+                  <div class="ts-bita-list">
+                    <div class="ts-bita-entry">
+                      <div class="ts-bita-date">Hoy · 14:32</div>
+                      <div class="ts-bita-body">
+                        <div class="ts-bita-photos">
+                          <div class="ts-photo p1"></div>
+                          <div class="ts-photo p2"></div>
+                          <div class="ts-photo p3">+4</div>
+                        </div>
+                        <div class="ts-bita-text">
+                          <div class="ts-bita-title">Vaciado de columnas — eje B</div>
+                          <p>Se completó vaciado de 8 columnas eje B, piso 3. Mezcla 3000 PSI. Temperatura: 28°C, viento bajo. Personal: 6 obreros + 1 operador de bomba.</p>
+                          <div class="ts-bita-tags"><span>Estructura</span><span>Avance: +3%</span><span>Clima: Soleado</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ts-bita-entry">
+                      <div class="ts-bita-date">Ayer · 09:15</div>
+                      <div class="ts-bita-body">
+                        <div class="ts-bita-photos">
+                          <div class="ts-photo p2"></div>
+                          <div class="ts-photo p3">+2</div>
+                        </div>
+                        <div class="ts-bita-text">
+                          <div class="ts-bita-title">Encofrado columnas eje B y C</div>
+                          <p>Se encofró la totalidad de las columnas previstas para vaciado.</p>
+                          <div class="ts-bita-tags"><span>Estructura</span><span>Avance: +1%</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tour-caption">
+              <h3 data-i18n="tour.c4_title">Bitácora de obra con evidencia fotográfica</h3>
+              <p data-i18n="tour.c4_text">Cada entrada registra actividades, fotos, clima y avance del día. Historial completo y trazable para reportes a clientes, supervisores o auditorías.</p>
+            </div>
+          </div>
+
+          <!-- Slide 5: Multi-project -->
+          <div class="tour-slide">
+            <div class="ts-browser">
+              <div class="ts-bar"><span class="ts-dot r"></span><span class="ts-dot y"></span><span class="ts-dot g"></span><span class="ts-url">app.projexaai.com/#/projects</span></div>
+              <div class="ts-screen">
+                <div class="ts-sidebar">
+                  <div class="ts-logo">P</div>
+                  <div class="ts-navg active"><i class="fa-solid fa-building"></i><span>Proyectos</span></div>
+                  <div class="ts-navg"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></div>
+                  <div class="ts-navg"><i class="fa-solid fa-diagram-project"></i><span>Fases</span></div>
+                </div>
+                <div class="ts-main">
+                  <div class="ts-toprow"><h4>Mis proyectos</h4><button class="ts-btn ts-btn-primary">+ Nuevo proyecto</button></div>
+                  <div class="ts-proj-grid">
+                    <div class="ts-proj-card active-proj">
+                      <div class="ts-pcard-top">
+                        <div class="ts-pcard-name">Torre Central</div>
+                        <div class="ts-pbadge on">Activo</div>
+                      </div>
+                      <div class="ts-pcard-stat"><span>Avance</span><strong>62%</strong></div>
+                      <div class="ts-pcard-bar"><div style="width:62%;background:#1e40af"></div></div>
+                      <div class="ts-pcard-meta">$210,000 · 5 fases · Piso 12</div>
+                    </div>
+                    <div class="ts-proj-card">
+                      <div class="ts-pcard-top">
+                        <div class="ts-pcard-name">Residencial Los Pinos</div>
+                        <div class="ts-pbadge on">Activo</div>
+                      </div>
+                      <div class="ts-pcard-stat"><span>Avance</span><strong>38%</strong></div>
+                      <div class="ts-pcard-bar"><div style="width:38%;background:#0891b2"></div></div>
+                      <div class="ts-pcard-meta">$85,000 · 4 fases · Casa</div>
+                    </div>
+                    <div class="ts-proj-card">
+                      <div class="ts-pcard-top">
+                        <div class="ts-pcard-name">Bodega Industrial A4</div>
+                        <div class="ts-pbadge plan">Planificación</div>
+                      </div>
+                      <div class="ts-pcard-stat"><span>Avance</span><strong>0%</strong></div>
+                      <div class="ts-pcard-bar"><div style="width:0%;background:#7c3aed"></div></div>
+                      <div class="ts-pcard-meta">$320,000 · 6 fases · Industrial</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tour-caption">
+              <h3 data-i18n="tour.c5_title">Portafolio de proyectos y organizaciones</h3>
+              <p data-i18n="tour.c5_text">Gestiona múltiples obras desde una sola cuenta. Invita a tu equipo con roles específicos — cada persona accede solo a lo que le corresponde.</p>
+            </div>
+          </div>
+
+        </div><!-- /tour-slides -->
+
+        <div class="tour-controls">
+          <button class="tour-prev" id="tourPrev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="tour-dots" id="tourDots">
+            <button class="tdot active" data-slide="0"></button>
+            <button class="tdot" data-slide="1"></button>
+            <button class="tdot" data-slide="2"></button>
+            <button class="tdot" data-slide="3"></button>
+            <button class="tdot" data-slide="4"></button>
+            <button class="tdot" data-slide="5"></button>
+          </div>
+          <button class="tour-next" id="tourNext" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ────────────────────────────────────────────── -->
+<section id="how" class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="kicker" data-i18n="how.kicker">Cómo funciona</span>
+      <h2 data-i18n="how.title">Tres pasos para tomar el control.</h2>
+    </div>
+    <ol class="steps" data-reveal>
+      <li class="step">
+        <div class="step-num">1</div>
+        <h3 data-i18n="how.s1_title">Crea tu proyecto</h3>
+        <p data-i18n="how.s1_text">Da de alta la obra con datos básicos. Si tienes planos, súbelos y la IA genera el presupuesto inicial de materiales.</p>
+      </li>
+      <li class="step">
+        <div class="step-num">2</div>
+        <h3 data-i18n="how.s2_title">Estructura fases y cronograma</h3>
+        <p data-i18n="how.s2_text">Define fases con fechas, dependencias y presupuesto. El sistema genera el Gantt y calcula la ruta crítica automáticamente.</p>
+      </li>
+      <li class="step">
+        <div class="step-num">3</div>
+        <h3 data-i18n="how.s3_title">Mide y controla en tiempo real</h3>
+        <p data-i18n="how.s3_text">Registra costos reales y avance diario. El dashboard calcula EVM, detecta desviaciones y proyecta el costo final antes de que sea tarde.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ── PRICING ─────────────────────────────────────────────────── -->
+<section id="pricing" class="section section-alt">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="kicker" data-i18n="pricing.kicker">Planes</span>
+      <h2 data-i18n="pricing.title">Empieza gratis. Escala cuando lo necesites.</h2>
+      <p class="section-lead" data-i18n="pricing.lead">Sin contratos ni permanencia. Cancela cuando quieras.</p>
+    </div>
+    <div class="pricing-grid" data-reveal>
+
+      <article class="plan">
+        <header>
+          <h3 data-i18n="pricing.p1_name">Free</h3>
+          <div class="price"><span class="price-amount">$0</span><span class="price-period" data-i18n="pricing.per_month">/mes</span></div>
+          <p class="plan-desc" data-i18n="pricing.p1_desc">Para probar la plataforma o gestionar un proyecto pequeño.</p>
+        </header>
+        <ul class="plan-feats">
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p1_f1">1 proyecto activo</span></li>
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p1_f2">Hasta 2 usuarios</span></li>
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p1_f3">Dashboard, presupuesto y costos</span></li>
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p1_f4">Bitácora con fotos</span></li>
+        </ul>
+        <a href="https://laguna-property.onrender.com" class="btn btn-outline btn-block" data-i18n="pricing.cta_free">Empezar gratis</a>
+      </article>
+
+      <article class="plan plan-featured">
+        <div class="plan-badge" data-i18n="pricing.badge_popular">Más popular</div>
+        <header>
+          <h3 data-i18n="pricing.p2_name">Pro</h3>
+          <div class="price"><span class="price-amount">$29</span><span class="price-period" data-i18n="pricing.per_month">/mes</span></div>
+          <p class="plan-desc" data-i18n="pricing.p2_desc">Para profesionales independientes y obras medianas.</p>
+        </header>
+        <ul class="plan-feats">
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p2_f1">Hasta 5 proyectos activos</span></li>
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p2_f2">Hasta 10 usuarios</span></li>
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p2_f3">EVM + ruta crítica completos</span></li>
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p2_f4">Cuantificador IA incluido</span></li>
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p2_f5">Exportes PDF</span></li>
+        </ul>
+        <a href="https://laguna-property.onrender.com" class="btn btn-cta btn-block" data-i18n="pricing.cta_pro">Probar Pro</a>
+      </article>
+
+      <article class="plan">
+        <header>
+          <h3 data-i18n="pricing.p3_name">Business</h3>
+          <div class="price"><span class="price-amount">$99</span><span class="price-period" data-i18n="pricing.per_month">/mes</span></div>
+          <p class="plan-desc" data-i18n="pricing.p3_desc">Para constructoras con múltiples equipos y obras en paralelo.</p>
+        </header>
+        <ul class="plan-feats">
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p3_f1">Proyectos ilimitados</span></li>
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p3_f2">Hasta 50 usuarios</span></li>
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p3_f3">Roles y permisos por proyecto</span></li>
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p3_f4">Audit trail y backup DB</span></li>
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p3_f5">Soporte prioritario</span></li>
+        </ul>
+        <a href="https://laguna-property.onrender.com" class="btn btn-outline btn-block" data-i18n="pricing.cta_business">Probar Business</a>
+      </article>
+
+      <article class="plan">
+        <header>
+          <h3 data-i18n="pricing.p4_name">Enterprise</h3>
+          <div class="price"><span class="price-amount" data-i18n="pricing.custom">A medida</span></div>
+          <p class="plan-desc" data-i18n="pricing.p4_desc">Para grandes organizaciones con requisitos específicos.</p>
+        </header>
+        <ul class="plan-feats">
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p4_f1">Usuarios y proyectos ilimitados</span></li>
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p4_f2">SSO y SLA garantizado</span></li>
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p4_f3">Onboarding dedicado</span></li>
+          <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p4_f4">Integraciones a medida</span></li>
+        </ul>
+        <a href="mailto:piero.cimule@gmail.com?subject=ProjexaAI%20Enterprise" class="btn btn-outline btn-block" data-i18n="pricing.cta_enterprise">Hablar con ventas</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ─────────────────────────────────────────────────────── -->
+<section id="faq" class="section">
+  <div class="container container-narrow">
+    <div class="section-head" data-reveal>
+      <span class="kicker" data-i18n="faq.kicker">Preguntas frecuentes</span>
+      <h2 data-i18n="faq.title">Lo que los equipos preguntan antes de empezar.</h2>
+    </div>
+    <div class="faq-list" data-reveal>
+      <details class="faq"><summary data-i18n="faq.q1">¿Necesito instalar algo?</summary><p data-i18n="faq.a1">No. ProjexaAI corre en el navegador. Puedes instalarla como PWA en móvil o escritorio para usarla también offline.</p></details>
+      <details class="faq"><summary data-i18n="faq.q2">¿Mis datos están seguros?</summary><p data-i18n="faq.a2">Sí. Cada proyecto está aislado por organización, con control de acceso por roles, audit trail completo y backup periódico.</p></details>
+      <details class="faq"><summary data-i18n="faq.q3">¿Cómo funciona el cuantificador con IA?</summary><p data-i18n="faq.a3">Subes tus planos PDF y la IA analiza ambientes, dimensiones y estructuras para proponer materiales y mano de obra. Todo editable antes de importar.</p></details>
+      <details class="faq"><summary data-i18n="faq.q4">¿Puedo invitar a mi equipo?</summary><p data-i18n="faq.a4">Sí. Desde el plan Pro puedes invitar usuarios y definir permisos por proyecto. Cada persona accede solo a lo que le corresponde.</p></details>
+      <details class="faq"><summary data-i18n="faq.q5">¿Para qué tamaño de obra es adecuada?</summary><p data-i18n="faq.a5">Desde una vivienda unifamiliar hasta un portafolio de obras industriales. La complejidad la configuras tú.</p></details>
+      <details class="faq"><summary data-i18n="faq.q6">¿Puedo cancelar cuando quiera?</summary><p data-i18n="faq.a6">Sí. Sin contratos ni permanencia. Al cancelar conservas acceso de lectura para exportar tus datos.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ───────────────────────────────────────────────── -->
+<section class="cta-final">
+  <div class="cta-bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+  <div class="container" style="position:relative;z-index:2;text-align:center">
+    <h2 data-i18n="cta.title">El control profesional que tu próxima obra exige.</h2>
+    <p data-i18n="cta.lead">Empieza gratis hoy. Sin tarjeta de crédito.</p>
+    <a href="https://laguna-property.onrender.com" class="btn btn-cta btn-xl" data-i18n="cta.button">
+      <i class="fa-solid fa-rocket"></i> Crear mi cuenta
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ──────────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="/img/logo-dark.svg" alt="ProjexaAI" height="40" />
+      <p class="footer-tagline" data-i18n="footer.tagline">La plataforma de gestión de obra que los profesionales de la construcción necesitaban.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4 data-i18n="footer.product">Producto</h4>
         <a href="#features" data-i18n="nav.features">Funciones</a>
-        <a href="#how" data-i18n="nav.how">Cómo funciona</a>
+        <a href="#tour" data-i18n="nav.tour">Demo</a>
         <a href="#pricing" data-i18n="nav.pricing">Planes</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
-      </nav>
-
-      <div class="topbar-actions">
-        <div class="lang-switch" role="group" aria-label="Idioma">
-          <button data-lang="es" class="lang-btn active" aria-label="Español">ES</button>
-          <button data-lang="en" class="lang-btn" aria-label="English">EN</button>
-          <button data-lang="pt" class="lang-btn" aria-label="Português">PT</button>
-        </div>
-        <a href="https://laguna-property.onrender.com" class="btn btn-ghost" data-i18n="nav.login">Iniciar sesión</a>
-        <a href="https://laguna-property.onrender.com" class="btn btn-primary" data-i18n="nav.signup">Empezar gratis</a>
-        <button class="mobile-toggle" id="mobile-toggle" aria-label="Menú">
-          <i class="fa-solid fa-bars"></i>
-        </button>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.company">Empresa</h4>
+        <a href="mailto:piero.cimule@gmail.com" data-i18n="footer.contact">Contacto</a>
+        <a href="https://laguna-property.onrender.com" data-i18n="nav.login">Iniciar sesión</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.legal">Legal</h4>
+        <a href="#" data-i18n="footer.privacy">Privacidad</a>
+        <a href="#" data-i18n="footer.terms">Términos</a>
       </div>
     </div>
-  </header>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">© <span id="year"></span> ProjexaAI. <span data-i18n="footer.rights">Todos los derechos reservados.</span></div>
+  </div>
+</footer>
 
-  <main id="top">
+<!-- ── FEATURE MODALS ──────────────────────────────────────────── -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-left" id="modalLeft"></div>
+    <div class="modal-right" id="modalRight"></div>
+  </div>
+</div>
 
-    <!-- ── Hero ────────────────────────────────────────────────────── -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <div class="eyebrow" data-i18n="hero.eyebrow">
-            <i class="fa-solid fa-sparkles"></i>
-            <span>Construcción · IA · En tiempo real</span>
-          </div>
-          <h1 class="hero-title" data-i18n="hero.title">
-            Controla tu obra como un <span class="grad">ingeniero senior</span>, sin serlo.
-          </h1>
-          <p class="hero-lead" data-i18n="hero.lead">
-            Planificación, presupuestos, costos reales, EVM, ruta crítica y cuantificación de materiales con IA — todo en una sola plataforma. Listo para una casa o para un portafolio de proyectos.
-          </p>
-          <div class="hero-cta">
-            <a href="https://laguna-property.onrender.com" class="btn btn-primary btn-lg" data-i18n="hero.cta_primary">
-              <i class="fa-solid fa-rocket"></i> Crear cuenta gratis
-            </a>
-            <a href="#features" class="btn btn-outline btn-lg" data-i18n="hero.cta_secondary">
-              <i class="fa-solid fa-circle-play"></i> Ver funciones
-            </a>
-          </div>
-          <ul class="hero-bullets">
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="hero.bullet1">Sin tarjeta de crédito</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="hero.bullet2">Multi-proyecto y multi-empresa</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="hero.bullet3">Funciona offline (PWA)</span></li>
-          </ul>
-        </div>
-
-        <!-- Hero visual: mockup dashboard -->
-        <div class="hero-visual" aria-hidden="true">
-          <div class="mockup">
-            <div class="mockup-bar">
-              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
-              <span class="mockup-url">app.projexaai.com / dashboard</span>
-            </div>
-            <div class="mockup-body">
-              <div class="kpi-row">
-                <div class="kpi kpi-blue">
-                  <div class="kpi-label">CPI</div>
-                  <div class="kpi-value">1.08</div>
-                </div>
-                <div class="kpi kpi-teal">
-                  <div class="kpi-label">SPI</div>
-                  <div class="kpi-value">0.94</div>
-                </div>
-                <div class="kpi kpi-green">
-                  <div class="kpi-label">Avance</div>
-                  <div class="kpi-value">62%</div>
-                </div>
-                <div class="kpi kpi-amber">
-                  <div class="kpi-label">Fin estimado</div>
-                  <div class="kpi-value">+12d</div>
-                </div>
-              </div>
-              <div class="chart">
-                <div class="chart-bar" style="height: 30%"></div>
-                <div class="chart-bar" style="height: 55%"></div>
-                <div class="chart-bar" style="height: 45%"></div>
-                <div class="chart-bar" style="height: 72%"></div>
-                <div class="chart-bar" style="height: 60%"></div>
-                <div class="chart-bar" style="height: 85%"></div>
-                <div class="chart-bar" style="height: 68%"></div>
-                <div class="chart-bar" style="height: 90%"></div>
-              </div>
-              <div class="gantt">
-                <div class="gantt-row"><span class="gantt-label">Cimentación</span><span class="gantt-bar" style="left:0%;width:18%"></span></div>
-                <div class="gantt-row"><span class="gantt-label">Estructura</span><span class="gantt-bar gantt-critical" style="left:15%;width:32%"></span></div>
-                <div class="gantt-row"><span class="gantt-label">Mampostería</span><span class="gantt-bar" style="left:42%;width:24%"></span></div>
-                <div class="gantt-row"><span class="gantt-label">Acabados</span><span class="gantt-bar" style="left:62%;width:30%"></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="floater floater-ai">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-            <div>
-              <strong data-i18n="hero.float_ai_title">Cuantificador IA</strong>
-              <small data-i18n="hero.float_ai_sub">Sube planos → genera lista de materiales</small>
-            </div>
-          </div>
-          <div class="floater floater-evm">
-            <i class="fa-solid fa-chart-line"></i>
-            <div>
-              <strong>EVM</strong>
-              <small data-i18n="hero.float_evm_sub">CPI, SPI, EAC, VAC en vivo</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Trust strip ────────────────────────────────────────────── -->
-    <section class="trust">
-      <div class="container">
-        <p class="trust-text" data-i18n="trust.text">
-          Pensado para constructoras, contratistas independientes, supervisores y propietarios que quieren saber exactamente dónde está su dinero — y su obra.
-        </p>
-      </div>
-    </section>
-
-    <!-- ── Features ──────────────────────────────────────────────── -->
-    <section id="features" class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker" data-i18n="features.kicker">Funciones</span>
-          <h2 data-i18n="features.title">Todo lo que necesitas para controlar tu obra.</h2>
-          <p class="section-lead" data-i18n="features.lead">Sin hojas de cálculo dispersas. Sin sorpresas a fin de mes.</p>
-        </div>
-
-        <div class="features-grid">
-          <article class="feature">
-            <div class="feature-icon feat-blue"><i class="fa-solid fa-gauge-high"></i></div>
-            <h3 data-i18n="features.f1_title">Dashboard con EVM</h3>
-            <p data-i18n="features.f1_text">CPI, SPI, EV, PV, CV, SV, EAC, VAC y fecha estimada de término. Las métricas que usa un PMP, en automático.</p>
-          </article>
-
-          <article class="feature">
-            <div class="feature-icon feat-teal"><i class="fa-solid fa-diagram-project"></i></div>
-            <h3 data-i18n="features.f2_title">Gantt + Ruta crítica</h3>
-            <p data-i18n="features.f2_text">Forward/backward pass, CPM y dependencias. Exporta tu cronograma a PDF en un click.</p>
-          </article>
-
-          <article class="feature">
-            <div class="feature-icon feat-purple"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-            <h3 data-i18n="features.f3_title">Cuantificador con IA</h3>
-            <p data-i18n="features.f3_text">Sube planos arquitectónicos y la IA propone materiales, mano de obra y cantidades. Editable, no caja negra.</p>
-          </article>
-
-          <article class="feature">
-            <div class="feature-icon feat-amber"><i class="fa-solid fa-receipt"></i></div>
-            <h3 data-i18n="features.f4_title">Presupuesto vs. Costos reales</h3>
-            <p data-i18n="features.f4_text">Captura facturas, asigna a fase y categoría. Compara contra lo presupuestado por partida en tiempo real.</p>
-          </article>
-
-          <article class="feature">
-            <div class="feature-icon feat-green"><i class="fa-solid fa-camera"></i></div>
-            <h3 data-i18n="features.f5_title">Bitácora con fotos</h3>
-            <p data-i18n="features.f5_text">Registro diario con evidencia fotográfica, clima y avance. Geolocalizado y trazable.</p>
-          </article>
-
-          <article class="feature">
-            <div class="feature-icon feat-red"><i class="fa-solid fa-building"></i></div>
-            <h3 data-i18n="features.f6_title">Multi-proyecto · Multi-empresa</h3>
-            <p data-i18n="features.f6_text">Organiza obras por empresa, invita a tu equipo con roles. Cada quien ve solo lo que le corresponde.</p>
-          </article>
-
-          <article class="feature">
-            <div class="feature-icon feat-blue"><i class="fa-solid fa-wifi"></i></div>
-            <h3 data-i18n="features.f7_title">Funciona offline</h3>
-            <p data-i18n="features.f7_text">PWA instalable. Trabajas sin señal en obra y sincroniza apenas vuelves a tener internet.</p>
-          </article>
-
-          <article class="feature">
-            <div class="feature-icon feat-teal"><i class="fa-solid fa-shield-halved"></i></div>
-            <h3 data-i18n="features.f8_title">Auditoría y trazabilidad</h3>
-            <p data-i18n="features.f8_text">Cada cambio queda registrado con usuario, fecha y diff. Para auditorías y para discutir con clientes.</p>
-          </article>
-
-          <article class="feature">
-            <div class="feature-icon feat-purple"><i class="fa-solid fa-flask"></i></div>
-            <h3 data-i18n="features.f9_title">Calculadora de concreto</h3>
-            <p data-i18n="features.f9_text">Cálculo independiente de mezclas y dosificaciones por f'c, sin tener que armar todo un proyecto.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── How it works ──────────────────────────────────────────── -->
-    <section id="how" class="section section-alt">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker" data-i18n="how.kicker">Cómo funciona</span>
-          <h2 data-i18n="how.title">En 3 pasos estás controlando tu obra.</h2>
-        </div>
-
-        <ol class="steps">
-          <li class="step">
-            <div class="step-num">1</div>
-            <h3 data-i18n="how.s1_title">Crea tu proyecto</h3>
-            <p data-i18n="how.s1_text">Da de alta tu obra con datos básicos. Si tienes planos, súbelos y deja que la IA proponga el presupuesto inicial.</p>
-          </li>
-          <li class="step">
-            <div class="step-num">2</div>
-            <h3 data-i18n="how.s2_title">Estructura fases y presupuesto</h3>
-            <p data-i18n="how.s2_text">Define fases con fechas y dependencias, asigna materiales y mano de obra. Genera tu Gantt y ruta crítica.</p>
-          </li>
-          <li class="step">
-            <div class="step-num">3</div>
-            <h3 data-i18n="how.s3_title">Registra y mide en vivo</h3>
-            <p data-i18n="how.s3_text">Captura costos reales y avance día a día. El dashboard te dice si estás dentro o fuera de plan — antes de que sea tarde.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ── Pricing ──────────────────────────────────────────────── -->
-    <section id="pricing" class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker" data-i18n="pricing.kicker">Planes</span>
-          <h2 data-i18n="pricing.title">Empieza gratis. Escala cuando lo necesites.</h2>
-          <p class="section-lead" data-i18n="pricing.lead">Sin contratos, sin permanencia. Cancelas cuando quieras.</p>
-        </div>
-
-        <div class="pricing-grid">
-          <article class="plan">
-            <header>
-              <h3 data-i18n="pricing.p1_name">Free</h3>
-              <div class="price"><span class="price-amount">$0</span><span class="price-period" data-i18n="pricing.per_month">/mes</span></div>
-              <p class="plan-desc" data-i18n="pricing.p1_desc">Para probar la plataforma o gestionar un proyecto pequeño.</p>
-            </header>
-            <ul class="plan-feats">
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p1_f1">1 proyecto activo</span></li>
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p1_f2">Hasta 2 usuarios</span></li>
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p1_f3">Dashboard, presupuesto y costos</span></li>
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p1_f4">Bitácora con fotos</span></li>
-            </ul>
-            <a href="https://laguna-property.onrender.com" class="btn btn-outline btn-block" data-i18n="pricing.cta_free">Empezar gratis</a>
-          </article>
-
-          <article class="plan plan-featured">
-            <div class="plan-badge" data-i18n="pricing.badge_popular">Más popular</div>
-            <header>
-              <h3 data-i18n="pricing.p2_name">Pro</h3>
-              <div class="price"><span class="price-amount">$29</span><span class="price-period" data-i18n="pricing.per_month">/mes</span></div>
-              <p class="plan-desc" data-i18n="pricing.p2_desc">Para constructores independientes y obras medianas.</p>
-            </header>
-            <ul class="plan-feats">
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p2_f1">Hasta 5 proyectos activos</span></li>
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p2_f2">Hasta 10 usuarios</span></li>
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p2_f3">EVM + ruta crítica completos</span></li>
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p2_f4">Cuantificador con IA (incluido)</span></li>
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p2_f5">Exportes PDF</span></li>
-            </ul>
-            <a href="https://laguna-property.onrender.com" class="btn btn-primary btn-block" data-i18n="pricing.cta_pro">Probar Pro</a>
-          </article>
-
-          <article class="plan">
-            <header>
-              <h3 data-i18n="pricing.p3_name">Business</h3>
-              <div class="price"><span class="price-amount">$99</span><span class="price-period" data-i18n="pricing.per_month">/mes</span></div>
-              <p class="plan-desc" data-i18n="pricing.p3_desc">Para constructoras con varios equipos y proyectos en paralelo.</p>
-            </header>
-            <ul class="plan-feats">
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p3_f1">Proyectos ilimitados</span></li>
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p3_f2">Hasta 50 usuarios</span></li>
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p3_f3">Roles y permisos por proyecto</span></li>
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p3_f4">Audit trail y backup DB</span></li>
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p3_f5">Soporte prioritario</span></li>
-            </ul>
-            <a href="https://laguna-property.onrender.com" class="btn btn-outline btn-block" data-i18n="pricing.cta_business">Probar Business</a>
-          </article>
-
-          <article class="plan">
-            <header>
-              <h3 data-i18n="pricing.p4_name">Enterprise</h3>
-              <div class="price"><span class="price-amount" data-i18n="pricing.custom">A medida</span></div>
-              <p class="plan-desc" data-i18n="pricing.p4_desc">Para grandes constructoras con necesidades específicas.</p>
-            </header>
-            <ul class="plan-feats">
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p4_f1">Usuarios y proyectos ilimitados</span></li>
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p4_f2">SSO y SLA</span></li>
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p4_f3">Onboarding dedicado</span></li>
-              <li><i class="fa-solid fa-check"></i> <span data-i18n="pricing.p4_f4">Integraciones a medida</span></li>
-            </ul>
-            <a href="mailto:piero.cimule@gmail.com?subject=ProjexaAI%20Enterprise" class="btn btn-outline btn-block" data-i18n="pricing.cta_enterprise">Hablar con ventas</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── FAQ ───────────────────────────────────────────────────── -->
-    <section id="faq" class="section section-alt">
-      <div class="container container-narrow">
-        <div class="section-head">
-          <span class="kicker" data-i18n="faq.kicker">Preguntas frecuentes</span>
-          <h2 data-i18n="faq.title">Lo que la gente pregunta antes de empezar.</h2>
-        </div>
-
-        <div class="faq-list">
-          <details class="faq">
-            <summary data-i18n="faq.q1">¿Necesito instalar algo?</summary>
-            <p data-i18n="faq.a1">No. ProjexaAI corre en el navegador. Si quieres, puedes instalarla como PWA en tu teléfono o computadora para que funcione también sin internet.</p>
-          </details>
-          <details class="faq">
-            <summary data-i18n="faq.q2">¿Mis datos están seguros?</summary>
-            <p data-i18n="faq.a2">Sí. Cada proyecto está aislado por organización, con control de acceso por roles, auditoría de cambios y respaldo periódico de la base de datos.</p>
-          </details>
-          <details class="faq">
-            <summary data-i18n="faq.q3">¿Cómo funciona el cuantificador con IA?</summary>
-            <p data-i18n="faq.a3">Subes tus planos y la IA analiza dimensiones, ambientes y partidas para proponer listas de materiales y mano de obra con cantidades. Todo es editable — la IA propone, tú decides.</p>
-          </details>
-          <details class="faq">
-            <summary data-i18n="faq.q4">¿Puedo invitar a mi equipo?</summary>
-            <p data-i18n="faq.a4">Sí. Desde el plan Pro puedes invitar a más usuarios y asignar permisos por proyecto. Cada quien ve solo lo que le corresponde.</p>
-          </details>
-          <details class="faq">
-            <summary data-i18n="faq.q5">¿Sirve para obras pequeñas o solo para grandes?</summary>
-            <p data-i18n="faq.a5">Las dos. Puedes usar lo justo para una casa o exprimir EVM y ruta crítica para un portafolio de obras. La complejidad la pones tú.</p>
-          </details>
-          <details class="faq">
-            <summary data-i18n="faq.q6">¿Puedo cancelar cuando quiera?</summary>
-            <p data-i18n="faq.a6">Sí. Sin contratos ni permanencia. Si cancelas, conservas acceso de solo lectura a tus datos para exportarlos.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Final CTA ─────────────────────────────────────────────── -->
-    <section class="cta-final">
-      <div class="container">
-        <h2 data-i18n="cta.title">Empieza a controlar tu obra hoy.</h2>
-        <p data-i18n="cta.lead">Gratis para tu primer proyecto. Sin tarjeta de crédito.</p>
-        <div class="cta-buttons">
-          <a href="https://laguna-property.onrender.com" class="btn btn-primary btn-lg" data-i18n="cta.button">
-            <i class="fa-solid fa-rocket"></i> Crear mi cuenta
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ── Footer ────────────────────────────────────────────────── -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <div class="brand">
-          <div class="brand-logo">P</div>
-          <div class="brand-text">
-            <span class="brand-name">ProjexaAI</span>
-            <span class="brand-sub" data-i18n="brand.tagline">Control de obra con IA</span>
-          </div>
-        </div>
-        <p class="footer-tagline" data-i18n="footer.tagline">La forma moderna de controlar la construcción.</p>
-      </div>
-
-      <div class="footer-cols">
-        <div class="footer-col">
-          <h4 data-i18n="footer.product">Producto</h4>
-          <a href="#features" data-i18n="nav.features">Funciones</a>
-          <a href="#pricing" data-i18n="nav.pricing">Planes</a>
-          <a href="#faq" data-i18n="nav.faq">FAQ</a>
-        </div>
-        <div class="footer-col">
-          <h4 data-i18n="footer.company">Empresa</h4>
-          <a href="mailto:piero.cimule@gmail.com" data-i18n="footer.contact">Contacto</a>
-          <a href="https://laguna-property.onrender.com" data-i18n="nav.login">Iniciar sesión</a>
-        </div>
-        <div class="footer-col">
-          <h4 data-i18n="footer.legal">Legal</h4>
-          <a href="#" data-i18n="footer.privacy">Privacidad</a>
-          <a href="#" data-i18n="footer.terms">Términos</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <span>© <span id="year"></span> ProjexaAI. <span data-i18n="footer.rights">Todos los derechos reservados.</span></span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/js/i18n.js"></script>
-  <script src="/js/main.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>
