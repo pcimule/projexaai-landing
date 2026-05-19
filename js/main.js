@@ -1,6 +1,6 @@
 /* ProjexaAI Landing v2 — interactions */
 (function () {
-  const APP_URL = 'https://laguna-property.onrender.com';
+  const APP_URL = 'https://app.projexaai.com';
 
   /* ── Year ───────────────────────────────────────────────────── */
   const yEl = document.getElementById('year');
