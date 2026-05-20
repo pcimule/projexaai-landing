@@ -507,11 +507,16 @@ img { display: block; max-width: 100%; }
 .plan { background: #fff; border: 1.5px solid var(--border); border-radius: var(--radius-lg); padding: 28px 22px; display: flex; flex-direction: column; position: relative; }
 .plan-featured { border: 2px solid var(--primary); box-shadow: var(--shadow-lg); transform: translateY(-8px); }
 .plan-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; padding: 4px 16px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; white-space: nowrap; }
-.plan h3 { font-size: 20px; margin-bottom: 8px; }
-.price { display: flex; align-items: baseline; gap: 3px; margin-bottom: 8px; }
+.plan-badge-promo { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+.plan h3 { font-size: 20px; margin-bottom: 6px; }
+.price { display: flex; align-items: baseline; gap: 3px; margin-bottom: 2px; }
 .price-amount { font-size: 38px; font-weight: 900; letter-spacing: -.02em; }
 .price-period { font-size: 14px; color: var(--text-muted); }
+.price-original { font-size: 13px; color: #94a3b8; text-decoration: line-through; margin-bottom: 2px; font-weight: 500; }
+.price-annual { font-size: 12px; color: #10b981; font-weight: 700; margin-bottom: 10px; }
+.price-trial { font-size: 13px; color: #10b981; font-weight: 600; margin-bottom: 8px; }
 .plan-desc { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+.early-access-banner { display: inline-block; margin-top: 16px; background: linear-gradient(135deg, #fef3c7, #fee2e2); border: 1.5px solid #fbbf24; color: #92400e; padding: 10px 22px; border-radius: 999px; font-size: 14px; font-weight: 500; }
 .plan-feats { list-style: none; padding: 0; margin: 0 0 24px; flex: 1; }
 .plan-feats li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; padding: 7px 0; color: var(--text-2); border-bottom: 1px solid var(--border); }
 .plan-feats li:last-child { border-bottom: none; }
