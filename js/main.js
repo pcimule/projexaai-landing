@@ -362,6 +362,18 @@
 
   function getCurrentLang() { return localStorage.getItem('projexa.lang') || 'es'; }
 
+  /* ── Sincronizar idioma con los links al app ────────────────────── */
+  function updateAppLinks() {
+    const lang = getCurrentLang();
+    document.querySelectorAll(`a[href^="${APP_URL}"]`).forEach((a) => {
+      try {
+        const url = new URL(a.href);
+        url.searchParams.set('lang', lang);
+        a.href = url.toString();
+      } catch (_) {}
+    });
+  }
+
   function openModal(featureKey) {
     const feat = FEATURES[featureKey];
     if (!feat) return;
@@ -394,4 +406,14 @@
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
   overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+  /* ── Propagar idioma a los links del app ─────────────────────────
+     Actualizamos al cargar y cada vez que el usuario cambia idioma.
+     i18n.js guarda la preferencia en localStorage antes de que este
+     listener se dispare (orden de registro), así getCurrentLang()
+     ya devuelve el valor nuevo. */
+  updateAppLinks();
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.addEventListener('click', () => updateAppLinks());
+  });
 })();
