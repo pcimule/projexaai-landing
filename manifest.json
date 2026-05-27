@@ -1,0 +1,18 @@
+{
+  "name": "ProjexaAI",
+  "short_name": "ProjexaAI",
+  "description": "Gestión profesional de obra con inteligencia artificial",
+  "start_url": "https://app.projexaai.com",
+  "display": "browser",
+  "background_color": "#050b1c",
+  "theme_color": "#050b1c",
+  "icons": [
+    {
+      "src": "/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "es"
+}

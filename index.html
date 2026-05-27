@@ -10,8 +10,14 @@
   <meta property="og:description" content="De los planos a la entrega — control total sobre presupuesto, costos, cronograma, EVM y ruta crítica." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://projexaai.com" />
+  <meta property="og:image" content="https://projexaai.com/img/social-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://projexaai.com/img/social-preview.png" />
 
   <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+  <link rel="manifest" href="/manifest.json" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -243,323 +249,122 @@
   </div>
 </section>
 
-<!-- ── TOUR ────────────────────────────────────────────────────── -->
-<section id="tour" class="section tour-section">
+<!-- ── INTERACTIVE DEMO ─────────────────────────────────────────── -->
+<section id="tour" class="section demo-section">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="kicker" data-i18n="tour.kicker">Demo</span>
-      <h2 data-i18n="tour.title">Recorre la plataforma en 60 segundos.</h2>
-      <p class="section-lead" data-i18n="tour.lead">Cada pantalla que ves es la interfaz real de ProjexaAI.</p>
+      <span class="kicker" data-i18n="tour.kicker">Demo interactivo</span>
+      <h2 data-i18n="tour.title_new">Ve ProjexaAI en acción — en tiempo real.</h2>
+      <p class="section-lead" data-i18n="tour.lead_new">Cada animación muestra la interfaz real de la plataforma. Usa los controles o espera y el demo avanza solo.</p>
     </div>
-    <div class="tour-wrap" data-reveal>
-      <div class="tour-nav">
-        <button class="tour-tab active" data-slide="0" data-i18n="tour.tab0">Dashboard</button>
-        <button class="tour-tab" data-slide="1" data-i18n="tour.tab1">Cronograma</button>
-        <button class="tour-tab" data-slide="2" data-i18n="tour.tab2">IA Cuantificador</button>
-        <button class="tour-tab" data-slide="3" data-i18n="tour.tab3">Costos</button>
-        <button class="tour-tab" data-slide="4" data-i18n="tour.tab4">Bitácora</button>
-        <button class="tour-tab" data-slide="5" data-i18n="tour.tab5">Proyectos</button>
-      </div>
-      <div class="tour-stage">
-        <div class="tour-slides" id="tourSlides">
 
-          <!-- Slide 0: Dashboard -->
-          <div class="tour-slide active">
-            <div class="ts-browser">
-              <div class="ts-bar"><span class="ts-dot r"></span><span class="ts-dot y"></span><span class="ts-dot g"></span><span class="ts-url">app.projexaai.com/#/dashboard</span></div>
-              <div class="ts-screen">
-                <div class="ts-sidebar">
-                  <div class="ts-logo">P</div>
-                  <div class="ts-navg active"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></div>
-                  <div class="ts-navg"><i class="fa-solid fa-diagram-project"></i><span>Fases</span></div>
-                  <div class="ts-navg"><i class="fa-solid fa-wallet"></i><span>Presupuesto</span></div>
-                  <div class="ts-navg"><i class="fa-solid fa-receipt"></i><span>Costos</span></div>
-                </div>
-                <div class="ts-main">
-                  <div class="ts-toprow">
-                    <h4>Dashboard</h4>
-                    <div class="ts-proj-badge"><i class="fa-solid fa-building-columns"></i> Torre Central — Piso 12</div>
-                  </div>
-                  <div class="ts-evm-row">
-                    <div class="ts-kpi k-blue"><div class="k-lbl">CPI</div><div class="k-val">1.08</div></div>
-                    <div class="ts-kpi k-teal"><div class="k-lbl">SPI</div><div class="k-val">0.94</div></div>
-                    <div class="ts-kpi k-green"><div class="k-lbl">Avance</div><div class="k-val">62%</div></div>
-                    <div class="ts-kpi k-amber"><div class="k-lbl">EAC</div><div class="k-val">$218k</div></div>
-                    <div class="ts-kpi k-red"><div class="k-lbl">Desv.</div><div class="k-val">-$8k</div></div>
-                  </div>
-                  <div class="ts-two-col">
-                    <div class="ts-card">
-                      <div class="ts-card-title">Presupuesto vs Real (mes)</div>
-                      <div class="ts-minibars">
-                        <div><div class="mb b-budget" style="height:70%"></div><div class="mb b-real" style="height:55%"></div></div>
-                        <div><div class="mb b-budget" style="height:80%"></div><div class="mb b-real" style="height:72%"></div></div>
-                        <div><div class="mb b-budget" style="height:60%"></div><div class="mb b-real" style="height:63%"></div></div>
-                        <div><div class="mb b-budget" style="height:90%"></div><div class="mb b-real" style="height:82%"></div></div>
-                        <div><div class="mb b-budget" style="height:75%"></div><div class="mb b-real" style="height:76%"></div></div>
-                      </div>
-                      <div class="ts-legend"><span class="leg-dot" style="background:#1e40af"></span>Presup. <span class="leg-dot" style="background:#0891b2;margin-left:8px"></span>Real</div>
-                    </div>
-                    <div class="ts-card">
-                      <div class="ts-card-title">Avance por fase</div>
-                      <div class="ts-phase-list">
-                        <div class="ts-phase"><span>Estructura</span><div class="ts-pbar"><div style="width:85%;background:#1e40af"></div></div><span>85%</span></div>
-                        <div class="ts-phase"><span>Mampostería</span><div class="ts-pbar"><div style="width:60%;background:#0891b2"></div></div><span>60%</span></div>
-                        <div class="ts-phase"><span>Instalaciones</span><div class="ts-pbar"><div style="width:40%;background:#7c3aed"></div></div><span>40%</span></div>
-                        <div class="ts-phase"><span>Acabados</span><div class="ts-pbar"><div style="width:10%;background:#d97706"></div></div><span>10%</span></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tour-caption">
-              <h3 data-i18n="tour.c0_title">Dashboard EVM en tiempo real</h3>
-              <p data-i18n="tour.c0_text">CPI, SPI, avance real vs planificado y fecha estimada de término — todo calculado automáticamente. Sin fórmulas manuales.</p>
+    <div class="idemo-wrap" data-reveal>
+
+      <!-- ── Left rail: scene buttons ────────────────────────────── -->
+      <div class="ids-rail">
+
+        <button class="ids-btn active" data-scene="0">
+          <div class="ids-icon feat-blue"><i class="fa-solid fa-gauge-high"></i></div>
+          <div class="ids-txt">
+            <strong data-i18n="tour.s0_title">Dashboard EVM</strong>
+            <span data-i18n="tour.s0_sub">Métricas en vivo</span>
+          </div>
+          <div class="ids-prog-wrap"><div class="ids-prog-fill"></div></div>
+        </button>
+
+        <button class="ids-btn" data-scene="1">
+          <div class="ids-icon feat-purple"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <div class="ids-txt">
+            <strong data-i18n="tour.s1_title">IA Cuantificador</strong>
+            <span data-i18n="tour.s1_sub">Planos → presupuesto</span>
+          </div>
+          <div class="ids-prog-wrap"><div class="ids-prog-fill"></div></div>
+        </button>
+
+        <button class="ids-btn" data-scene="2">
+          <div class="ids-icon feat-teal"><i class="fa-solid fa-diagram-project"></i></div>
+          <div class="ids-txt">
+            <strong data-i18n="tour.s2_title">Gantt + CPM</strong>
+            <span data-i18n="tour.s2_sub">Ruta crítica automática</span>
+          </div>
+          <div class="ids-prog-wrap"><div class="ids-prog-fill"></div></div>
+        </button>
+
+        <button class="ids-btn" data-scene="3">
+          <div class="ids-icon feat-amber"><i class="fa-solid fa-receipt"></i></div>
+          <div class="ids-txt">
+            <strong data-i18n="tour.s3_title">Control de costos</strong>
+            <span data-i18n="tour.s3_sub">Presupuesto vs real</span>
+          </div>
+          <div class="ids-prog-wrap"><div class="ids-prog-fill"></div></div>
+        </button>
+
+        <button class="ids-btn" data-scene="4">
+          <div class="ids-icon feat-green"><i class="fa-solid fa-camera"></i></div>
+          <div class="ids-txt">
+            <strong data-i18n="tour.s4_title">Bitácora</strong>
+            <span data-i18n="tour.s4_sub">Registro fotográfico</span>
+          </div>
+          <div class="ids-prog-wrap"><div class="ids-prog-fill"></div></div>
+        </button>
+
+      </div><!-- /ids-rail -->
+
+      <!-- ── Right: browser frame ─────────────────────────────────── -->
+      <div class="idemo-frame-wrap">
+
+        <div class="idemo-browser">
+          <!-- Browser chrome -->
+          <div class="idemo-chrome">
+            <span class="idb-dot r"></span>
+            <span class="idb-dot y"></span>
+            <span class="idb-dot g"></span>
+            <div class="idemo-url-bar">
+              <i class="fa-solid fa-lock"></i>
+              <span id="idemoUrl">app.projexaai.com/#/dashboard</span>
             </div>
           </div>
-
-          <!-- Slide 1: Gantt -->
-          <div class="tour-slide">
-            <div class="ts-browser">
-              <div class="ts-bar"><span class="ts-dot r"></span><span class="ts-dot y"></span><span class="ts-dot g"></span><span class="ts-url">app.projexaai.com/#/phases</span></div>
-              <div class="ts-screen">
-                <div class="ts-sidebar">
-                  <div class="ts-logo">P</div>
-                  <div class="ts-navg"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></div>
-                  <div class="ts-navg active"><i class="fa-solid fa-diagram-project"></i><span>Fases</span></div>
-                  <div class="ts-navg"><i class="fa-solid fa-wallet"></i><span>Presupuesto</span></div>
-                  <div class="ts-navg"><i class="fa-solid fa-receipt"></i><span>Costos</span></div>
-                </div>
-                <div class="ts-main">
-                  <div class="ts-toprow"><h4>Fases / Gantt</h4><div class="ts-actions"><button class="ts-btn">Exportar PDF</button><button class="ts-btn ts-btn-primary">+ Fase</button></div></div>
-                  <div class="ts-gantt-wrap">
-                    <div class="ts-gantt-header">
-                      <div class="tgh-label">Fase</div>
-                      <div class="tgh-months"><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span></div>
-                    </div>
-                    <div class="ts-gantt-rows">
-                      <div class="tgr"><span class="tgr-name">Cimentación</span><div class="tgr-track"><div class="tgr-bar" style="left:0%;width:14%"></div></div><span class="tgr-pct">100%</span></div>
-                      <div class="tgr"><span class="tgr-name">Estructura</span><div class="tgr-track"><div class="tgr-bar critical" style="left:12%;width:35%"></div><div class="critical-tag">Ruta crítica</div></div><span class="tgr-pct">85%</span></div>
-                      <div class="tgr"><span class="tgr-name">Mampostería</span><div class="tgr-track"><div class="tgr-bar" style="left:30%;width:28%"></div></div><span class="tgr-pct">60%</span></div>
-                      <div class="tgr"><span class="tgr-name">Instalaciones</span><div class="tgr-track"><div class="tgr-bar" style="left:40%;width:32%"></div></div><span class="tgr-pct">40%</span></div>
-                      <div class="tgr"><span class="tgr-name">Acabados</span><div class="tgr-track"><div class="tgr-bar" style="left:60%;width:35%"></div></div><span class="tgr-pct">10%</span></div>
-                    </div>
-                    <div class="today-line"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tour-caption">
-              <h3 data-i18n="tour.c1_title">Gantt + CPM automático</h3>
-              <p data-i18n="tour.c1_text">El algoritmo de ruta crítica (CPM) se recalcula con cada cambio. Identifica qué fases bloquean el proyecto y cuántos días están en riesgo.</p>
-            </div>
+          <!-- Thin progress bar under chrome -->
+          <div class="idemo-prog-bar"><div id="idemoProgress"></div></div>
+          <!-- Scene content -->
+          <div class="idemo-screen" id="idemoScreen">
+            <!-- injected by demo.js -->
           </div>
-
-          <!-- Slide 2: IA -->
-          <div class="tour-slide">
-            <div class="ts-browser">
-              <div class="ts-bar"><span class="ts-dot r"></span><span class="ts-dot y"></span><span class="ts-dot g"></span><span class="ts-url">app.projexaai.com/#/ia-quantifier</span></div>
-              <div class="ts-screen">
-                <div class="ts-sidebar">
-                  <div class="ts-logo">P</div>
-                  <div class="ts-navg"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></div>
-                  <div class="ts-navg"><i class="fa-solid fa-diagram-project"></i><span>Fases</span></div>
-                  <div class="ts-navg"><i class="fa-solid fa-wallet"></i><span>Presupuesto</span></div>
-                  <div class="ts-navg active"><i class="fa-solid fa-wand-magic-sparkles"></i><span>IA</span></div>
-                </div>
-                <div class="ts-main">
-                  <div class="ts-toprow"><h4>Cuantificador IA</h4></div>
-                  <div class="ts-ia-wrap">
-                    <div class="ts-ia-left">
-                      <div class="ts-upload-zone">
-                        <i class="fa-solid fa-file-image"></i>
-                        <div class="ts-upload-name">plano-arquitectonico-A1.pdf</div>
-                        <div class="ts-upload-status ok"><i class="fa-solid fa-check"></i> Analizado</div>
-                      </div>
-                      <div class="ts-ia-prompt">
-                        <div class="ts-ia-msg sys">Plano recibido. Identifiqué 6 ambientes y 3 plantas. ¿Genero lista de materiales completa o por fase?</div>
-                        <div class="ts-ia-msg usr">Lista completa con mano de obra.</div>
-                        <div class="ts-ia-msg sys thinking"><span></span><span></span><span></span></div>
-                      </div>
-                    </div>
-                    <div class="ts-ia-right">
-                      <div class="ts-ia-table-title">Lista generada <span class="ts-badge-new">IA</span></div>
-                      <div class="ts-ia-table">
-                        <div class="ts-ia-row h"><span>Material</span><span>Unid.</span><span>Cant.</span></div>
-                        <div class="ts-ia-row"><span>Cemento Portland</span><span>saco</span><span>420</span></div>
-                        <div class="ts-ia-row"><span>Bloque 6"</span><span>u</span><span>8 400</span></div>
-                        <div class="ts-ia-row"><span>Varilla #4</span><span>qq</span><span>38</span></div>
-                        <div class="ts-ia-row"><span>Arena</span><span>m³</span><span>24</span></div>
-                        <div class="ts-ia-row"><span>Mano de obra</span><span>jornal</span><span>180</span></div>
-                      </div>
-                      <button class="ts-btn ts-btn-primary" style="margin-top:8px;width:100%">Importar al presupuesto</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tour-caption">
-              <h3 data-i18n="tour.c2_title">Cuantificación de materiales con IA</h3>
-              <p data-i18n="tour.c2_text">Sube tus planos PDF y la IA analiza ambientes, dimensiones y estructuras para proponer cantidades de materiales y jornales. Editable antes de importar.</p>
-            </div>
-          </div>
-
-          <!-- Slide 3: Costs -->
-          <div class="tour-slide">
-            <div class="ts-browser">
-              <div class="ts-bar"><span class="ts-dot r"></span><span class="ts-dot y"></span><span class="ts-dot g"></span><span class="ts-url">app.projexaai.com/#/costs</span></div>
-              <div class="ts-screen">
-                <div class="ts-sidebar">
-                  <div class="ts-logo">P</div>
-                  <div class="ts-navg"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></div>
-                  <div class="ts-navg"><i class="fa-solid fa-diagram-project"></i><span>Fases</span></div>
-                  <div class="ts-navg"><i class="fa-solid fa-wallet"></i><span>Presupuesto</span></div>
-                  <div class="ts-navg active"><i class="fa-solid fa-receipt"></i><span>Costos</span></div>
-                </div>
-                <div class="ts-main">
-                  <div class="ts-toprow"><h4>Costos reales</h4><button class="ts-btn ts-btn-primary">+ Costo</button></div>
-                  <div class="ts-cost-summary">
-                    <div class="ts-cs"><div class="ts-cs-lbl">Presupuestado</div><div class="ts-cs-val navy">$210,000</div></div>
-                    <div class="ts-cs"><div class="ts-cs-lbl">Gastado</div><div class="ts-cs-val blue">$134,200</div></div>
-                    <div class="ts-cs"><div class="ts-cs-lbl">Disponible</div><div class="ts-cs-val green">$75,800</div></div>
-                    <div class="ts-cs"><div class="ts-cs-lbl">Desviación</div><div class="ts-cs-val amber">+2.1%</div></div>
-                  </div>
-                  <div class="ts-cost-table">
-                    <div class="tct-row h"><span>Descripción</span><span>Categoría</span><span>Fase</span><span>Monto</span></div>
-                    <div class="tct-row"><span>Concreto 3000PSI — 18m³</span><span class="tct-cat mat">Material</span><span>Estructura</span><span>$4,320</span></div>
-                    <div class="tct-row"><span>Jornales semana 18</span><span class="tct-cat lab">Mano obra</span><span>Mampostería</span><span>$2,800</span></div>
-                    <div class="tct-row"><span>Varillas corrugadas #4</span><span class="tct-cat mat">Material</span><span>Estructura</span><span>$1,960</span></div>
-                    <div class="tct-row"><span>Andamios (alquiler)</span><span class="tct-cat eq">Equipo</span><span>Estructura</span><span>$640</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tour-caption">
-              <h3 data-i18n="tour.c3_title">Control presupuestario en tiempo real</h3>
-              <p data-i18n="tour.c3_text">Registra cada gasto y asígnalo a fase y categoría. El sistema compara automáticamente contra el presupuesto y calcula la desviación acumulada.</p>
-            </div>
-          </div>
-
-          <!-- Slide 4: Bitácora -->
-          <div class="tour-slide">
-            <div class="ts-browser">
-              <div class="ts-bar"><span class="ts-dot r"></span><span class="ts-dot y"></span><span class="ts-dot g"></span><span class="ts-url">app.projexaai.com/#/bitacora</span></div>
-              <div class="ts-screen">
-                <div class="ts-sidebar">
-                  <div class="ts-logo">P</div>
-                  <div class="ts-navg"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></div>
-                  <div class="ts-navg"><i class="fa-solid fa-diagram-project"></i><span>Fases</span></div>
-                  <div class="ts-navg active"><i class="fa-solid fa-camera"></i><span>Bitácora</span></div>
-                </div>
-                <div class="ts-main">
-                  <div class="ts-toprow"><h4>Bitácora de obra</h4><button class="ts-btn ts-btn-primary">+ Entrada</button></div>
-                  <div class="ts-bita-list">
-                    <div class="ts-bita-entry">
-                      <div class="ts-bita-date">Hoy · 14:32</div>
-                      <div class="ts-bita-body">
-                        <div class="ts-bita-photos">
-                          <div class="ts-photo p1"></div>
-                          <div class="ts-photo p2"></div>
-                          <div class="ts-photo p3">+4</div>
-                        </div>
-                        <div class="ts-bita-text">
-                          <div class="ts-bita-title">Vaciado de columnas — eje B</div>
-                          <p>Se completó vaciado de 8 columnas eje B, piso 3. Mezcla 3000 PSI. Temperatura: 28°C, viento bajo. Personal: 6 obreros + 1 operador de bomba.</p>
-                          <div class="ts-bita-tags"><span>Estructura</span><span>Avance: +3%</span><span>Clima: Soleado</span></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ts-bita-entry">
-                      <div class="ts-bita-date">Ayer · 09:15</div>
-                      <div class="ts-bita-body">
-                        <div class="ts-bita-photos">
-                          <div class="ts-photo p2"></div>
-                          <div class="ts-photo p3">+2</div>
-                        </div>
-                        <div class="ts-bita-text">
-                          <div class="ts-bita-title">Encofrado columnas eje B y C</div>
-                          <p>Se encofró la totalidad de las columnas previstas para vaciado.</p>
-                          <div class="ts-bita-tags"><span>Estructura</span><span>Avance: +1%</span></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tour-caption">
-              <h3 data-i18n="tour.c4_title">Bitácora de obra con evidencia fotográfica</h3>
-              <p data-i18n="tour.c4_text">Cada entrada registra actividades, fotos, clima y avance del día. Historial completo y trazable para reportes a clientes, supervisores o auditorías.</p>
-            </div>
-          </div>
-
-          <!-- Slide 5: Multi-project -->
-          <div class="tour-slide">
-            <div class="ts-browser">
-              <div class="ts-bar"><span class="ts-dot r"></span><span class="ts-dot y"></span><span class="ts-dot g"></span><span class="ts-url">app.projexaai.com/#/projects</span></div>
-              <div class="ts-screen">
-                <div class="ts-sidebar">
-                  <div class="ts-logo">P</div>
-                  <div class="ts-navg active"><i class="fa-solid fa-building"></i><span>Proyectos</span></div>
-                  <div class="ts-navg"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></div>
-                  <div class="ts-navg"><i class="fa-solid fa-diagram-project"></i><span>Fases</span></div>
-                </div>
-                <div class="ts-main">
-                  <div class="ts-toprow"><h4>Mis proyectos</h4><button class="ts-btn ts-btn-primary">+ Nuevo proyecto</button></div>
-                  <div class="ts-proj-grid">
-                    <div class="ts-proj-card active-proj">
-                      <div class="ts-pcard-top">
-                        <div class="ts-pcard-name">Torre Central</div>
-                        <div class="ts-pbadge on">Activo</div>
-                      </div>
-                      <div class="ts-pcard-stat"><span>Avance</span><strong>62%</strong></div>
-                      <div class="ts-pcard-bar"><div style="width:62%;background:#1e40af"></div></div>
-                      <div class="ts-pcard-meta">$210,000 · 5 fases · Piso 12</div>
-                    </div>
-                    <div class="ts-proj-card">
-                      <div class="ts-pcard-top">
-                        <div class="ts-pcard-name">Residencial Los Pinos</div>
-                        <div class="ts-pbadge on">Activo</div>
-                      </div>
-                      <div class="ts-pcard-stat"><span>Avance</span><strong>38%</strong></div>
-                      <div class="ts-pcard-bar"><div style="width:38%;background:#0891b2"></div></div>
-                      <div class="ts-pcard-meta">$85,000 · 4 fases · Casa</div>
-                    </div>
-                    <div class="ts-proj-card">
-                      <div class="ts-pcard-top">
-                        <div class="ts-pcard-name">Bodega Industrial A4</div>
-                        <div class="ts-pbadge plan">Planificación</div>
-                      </div>
-                      <div class="ts-pcard-stat"><span>Avance</span><strong>0%</strong></div>
-                      <div class="ts-pcard-bar"><div style="width:0%;background:#7c3aed"></div></div>
-                      <div class="ts-pcard-meta">$320,000 · 6 fases · Industrial</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tour-caption">
-              <h3 data-i18n="tour.c5_title">Portafolio de proyectos y organizaciones</h3>
-              <p data-i18n="tour.c5_text">Gestiona múltiples obras desde una sola cuenta. Invita a tu equipo con roles específicos — cada persona accede solo a lo que le corresponde.</p>
-            </div>
-          </div>
-
-        </div><!-- /tour-slides -->
-
-        <div class="tour-controls">
-          <button class="tour-prev" id="tourPrev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
-          <div class="tour-dots" id="tourDots">
-            <button class="tdot active" data-slide="0"></button>
-            <button class="tdot" data-slide="1"></button>
-            <button class="tdot" data-slide="2"></button>
-            <button class="tdot" data-slide="3"></button>
-            <button class="tdot" data-slide="4"></button>
-            <button class="tdot" data-slide="5"></button>
-          </div>
-          <button class="tour-next" id="tourNext" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
-      </div>
-    </div>
+
+        <!-- Controls -->
+        <div class="idemo-controls-bar">
+          <div class="idemo-ctrl-group">
+            <button class="idemo-ctrl" id="idemoPrev" aria-label="Escena anterior">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="idemo-ctrl" id="idemoPlayPause" aria-label="Play / Pausa">
+              <i class="fa-solid fa-pause" id="idemoPlayIcon"></i>
+            </button>
+            <button class="idemo-ctrl" id="idemoNext" aria-label="Escena siguiente">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="idemo-dots">
+            <button class="idemo-dot active" aria-label="Escena 1"></button>
+            <button class="idemo-dot" aria-label="Escena 2"></button>
+            <button class="idemo-dot" aria-label="Escena 3"></button>
+            <button class="idemo-dot" aria-label="Escena 4"></button>
+            <button class="idemo-dot" aria-label="Escena 5"></button>
+          </div>
+          <span style="font-size:11px;color:rgba(255,255,255,.35)" data-i18n="tour.hint">← → para navegar · Espacio para pausar</span>
+        </div>
+
+        <!-- CTA below browser -->
+        <div class="idemo-cta-row">
+          <a href="https://app.projexaai.com" class="btn btn-cta btn-xl" data-i18n="tour.cta">
+            <i class="fa-solid fa-rocket"></i> Probar gratis — sin tarjeta de crédito
+          </a>
+        </div>
+
+      </div><!-- /idemo-frame-wrap -->
+
+    </div><!-- /idemo-wrap -->
   </div>
 </section>
 
@@ -670,7 +475,7 @@
           <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p4_f3">Onboarding dedicado</span></li>
           <li><i class="fa-solid fa-check"></i><span data-i18n="pricing.p4_f4">Integraciones a medida</span></li>
         </ul>
-        <a href="mailto:piero.cimule@gmail.com?subject=ProjexaAI%20Enterprise" class="btn btn-outline btn-block" data-i18n="pricing.cta_enterprise">Hablar con ventas</a>
+        <a href="mailto:hola@projexaai.com?subject=ProjexaAI%20Enterprise" class="btn btn-outline btn-block" data-i18n="pricing.cta_enterprise">Hablar con ventas</a>
       </article>
 
     </div>
@@ -726,13 +531,13 @@
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer.company">Empresa</h4>
-        <a href="mailto:piero.cimule@gmail.com" data-i18n="footer.contact">Contacto</a>
+        <a href="mailto:hola@projexaai.com" data-i18n="footer.contact">Contacto</a>
         <a href="https://app.projexaai.com" data-i18n="nav.login">Iniciar sesión</a>
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer.legal">Legal</h4>
-        <a href="#" data-i18n="footer.privacy">Privacidad</a>
-        <a href="#" data-i18n="footer.terms">Términos</a>
+        <a href="/privacy.html" data-i18n="footer.privacy">Privacidad</a>
+        <a href="/terms.html" data-i18n="footer.terms">Términos</a>
       </div>
     </div>
   </div>
@@ -752,5 +557,6 @@
 
 <script src="/js/i18n.js"></script>
 <script src="/js/main.js"></script>
+<script src="/js/demo.js"></script>
 </body>
 </html>
